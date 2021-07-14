@@ -17,13 +17,13 @@
 <img class = "lightning" src="/assets/lightning.svg" alt="lightning">
 <h2 class = "h3-like contact--title">Vraag of opmerking?</h2>
 </div>
-<form action="{{ url('contant')}}" method="POST" class="form">
+<form action="{{ url('/create')}}" method="POST" class="form">
 @csrf
 <input class="form--input" type="text" placeholder="Naam" name="name" id="name" required /> <br>
-<input class="form--input" type="text" placeholder="Telefoon" name="telefoon" id="telefoon" required /> <br>
+<input class="form--input" type="text" placeholder="Telefoon" name="phone" id="phone" required /> <br>
 <input class="form--input" type="text" placeholder="E-mail" name="email" id="email" required /> <br>
-<input class="form--input" type="text" placeholder="Bericht" name="bericht" id="bericht" required /> <br>
-<input type="submit" class = "form--button" value = "verzenden">
+<input class="form--input" type="text" placeholder="Bericht" name="message" id="message" required /> <br>
+<input type="submit" class = "form--button"  value = "verzenden">
 </form>
 </div>
 </section>

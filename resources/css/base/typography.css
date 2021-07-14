@@ -1,11 +1,11 @@
 
 body {
-
+font-family: var(--font);
 }
 
 p{
 margin-top:0;
-margin-bottom: 0;
+margin-bottom:0;
 }
 
 
@@ -16,15 +16,24 @@ h1, .h1-like {
 h2, .h2-like{
 font-size:var(--fontSizeBig);
 font-family: var(--font);
-letter-spacing: 1.5rem;
+letter-spacing: 1rem;
+color: var(--colorAlt);
 }
 
 h3,.h3-like{
-
+font-size:var(--fontSizeRegular);
+font-family: var(--font);
+color: var(--colorDark);
+letter-spacing: 2rem;
 }
 
 h4,.h4-like{
 
+}
+
+.form--button{
+text-transform:uppercase;
+font-weight: var(--fontWeightMedium);
 }
 
 

@@ -53,6 +53,7 @@
     text-align: center;
     color: var(--colorAlt);
     margin-bottom: 2rem;
+    font-size:var(--fontSizeMedium);
 }
 
 .contact--data {

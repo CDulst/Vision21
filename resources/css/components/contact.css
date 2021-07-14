@@ -1,39 +1,78 @@
-.contact{
-width:100%;
-display:flex;
-justify-content:center;
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.contact--container{
-width:30%;
-min-width:600px;
+.contact--container {
+    width: 30%;
+    min-width: 600px;
 }
 
-.contact--titlesection{
-display:flex;
-flex-direction: column;
-align-items:center;
-padding: 1rem 0;
-border-bottom:var(--colorSecondary) solid 2px;
-margin-bottom:2rem;
+.contact--titlesection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: var(--colorSecondary) solid 2px;
+    margin-bottom: 2rem;
 }
+
+.form--wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.form--checkbox {
+    position: relative;
+}
+
+.form--checkbox label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 22px;
+    border: solid 2px var(--colorAlt);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 22px;
+}
+
+.form--checkbox input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.form--checkbox input[type="checkbox"]:checked+label {
+    background-color: var(--colorSecondary);
+}
+
+.alert {
+    text-align: center;
+    color: var(--colorAlt);
+    margin-bottom: 2rem;
+}
+
+.contact--data {
+    width: 80%;
+    letter-spacing: 0.1rem;
+}
+
 @media only screen and (max-width: 900px) {
-
-    .contact--container{
-        width:70%;
-        min-width:auto;
-        }
-
-    .contact--title{
-        text-align:center;
+    .contact--container {
+        width: 70%;
+        min-width: auto;
     }
-
+    .contact--title {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .contact--container{
-        width:90%;
-        min-width:auto;
-        }
+    .contact--container {
+        width: 90%;
+        min-width: auto;
+    }
 }
-

@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height:100%;
+    overflow-x:hidden;
+
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+
+}
+
+.hidden {
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+}
+
+.main {
+
+}
+
+.invert{
+filter: brightness(0) invert(1);
+}
+
+.white{
+    color:var(--colorWhite);
+}
+
+h2,
+.h2-like,
+h3 {
+    color: var(--colorDark);
+}
+

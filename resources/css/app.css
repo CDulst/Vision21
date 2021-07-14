@@ -1,0 +1,12 @@
+/* General styles */
+@import 'base/vars.css';
+@import 'base/base.css';
+@import 'base/normalize.css';
+@import 'base/typography.css';
+@import 'base/buttons.css';
+@import 'base/images.css';
+
+
+/* Components */
+@import 'components/header.css';
+@import 'components/footer.css';

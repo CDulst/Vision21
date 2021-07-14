@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom:4rem;
 }
 
 .contact--container {
@@ -49,6 +50,12 @@
     background-color: var(--colorSecondary);
 }
 
+.feedback{
+color:red;
+margin: 0.5rem 0;
+}
+
+
 .alert {
     text-align: center;
     color: var(--colorAlt);
@@ -60,6 +67,11 @@
     width: 80%;
     letter-spacing: 0.1rem;
 }
+
+.errorBorder{
+    border: solid 2px red;
+    }
+
 
 @media only screen and (max-width: 900px) {
     .contact--container {

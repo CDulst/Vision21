@@ -1,12 +1,8 @@
 html {
     box-sizing: border-box;
 }
-html, body {
-    width: 100%;
-    height:100%;
-    overflow-x:hidden;
-
-}
+html { height: 100%; overflow:auto; }
+body { height: 100%;}
 *,
 *::before,
 *::after {
@@ -27,7 +23,7 @@ ul{
 }
 
 .main {
-width:100%;
+margin-bottom:5rem;
 }
 
 .invert{
@@ -45,6 +41,6 @@ h3 {
 }
 
 section{
-    margin-bottom:5rem;
+    margin-bottom:8rem;
 }
 

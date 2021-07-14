@@ -12,3 +12,7 @@ border-radius: 2rem;
 font-size:var(--fontSizeSmall);
 margin-bottom:0.8rem;
 }
+
+.errorBorder{
+    border: solid 2px red;
+    }

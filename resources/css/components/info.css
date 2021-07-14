@@ -19,6 +19,7 @@
 
 .info--title {
     max-width: 20rem;
+    text-align: start;
 }
 
 .sportsclub {
@@ -30,6 +31,7 @@
 .adres--wrapper {
     display: flex;
     justify-content: space-between;
+    max-width:30rem;
 }
 
 .adres--text {
@@ -52,6 +54,7 @@
     width: 50%;
     max-width: 10rem;
 }
+
 
 .shortwrapper {
     width: 70%;
@@ -84,4 +87,55 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .info {
+        flex-direction: column;
+    }
+    .sportsclub{
+        display: none;
+    }
+    .info--container{
+        width:80%;
+        margin-bottom:2rem;
+    }
+
+    .adres--container{
+        margin-bottom:1.5rem;
+    }
+
+   .adres--container-special{
+    width:70%;
+   }
+
+    .adres--wrapper{
+        flex-direction: row;
+    }
+
+    .info--wrapper{
+        width:90%;
+    }
+
+    .shortwrapper{
+        width:100%;
+        margin-top:0rem;
+    }
+
+    .icons--route{
+        width:100%;
+    }
+
+    .info--map {
+        height:40vh;
+        width: 100%;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .info--container{
+        width:90%;
+        margin-bottom:2rem;
+    }
   }

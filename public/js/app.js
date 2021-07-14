@@ -1,15 +1,107 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-var init = function init() {};
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/form */ "./resources/js/components/form.js");
+
+
+var init = function init() {
+  (0,_components_form__WEBPACK_IMPORTED_MODULE_0__.Validator)();
+  (0,_components_form__WEBPACK_IMPORTED_MODULE_0__.Scroll)();
+};
 
 init();
+
+/***/ }),
+
+/***/ "./resources/js/components/form.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/form.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Validator": () => (/* binding */ Validator),
+/* harmony export */   "Scroll": () => (/* binding */ Scroll)
+/* harmony export */ });
+var Validator = function Validator() {
+  var $inputwrappers = document.querySelectorAll(".inputwrapper");
+  var status = {
+    name: false,
+    phone: false,
+    email: false,
+    message: false
+  };
+
+  var checkInputs = function checkInputs(e) {
+    console.log(status[e.currentTarget.id]);
+    $inputwrappers.forEach(function (wrapper) {
+      wrapper.querySelector(".form--input").classList.remove("errorBorder");
+      wrapper.childNodes[1].textContent = "";
+    });
+    $inputwrappers.forEach(function (wrapper) {
+      // normal validation
+      console.log(status[wrapper.id]);
+
+      if (status[wrapper.id] && wrapper.querySelector(".form--input").value == "") {
+        wrapper.childNodes[1].textContent = "Field is empty";
+        wrapper.querySelector(".form--input").classList.add("errorBorder");
+      } // phone validatioon
+
+
+      if (wrapper.id == "phone") {
+        if (/^[a-zA-Z]+$/.test(wrapper.querySelector(".form--input").value) || wrapper.querySelector(".form--input").value.length > 10) {
+          if (status[wrapper.id]) {
+            wrapper.childNodes[1].textContent = "this is not a valid phone number";
+            wrapper.querySelector(".form--input").classList.add("errorBorder");
+          }
+        } //check if all
+
+      } // email validation‡
+
+
+      if (wrapper.id == "email") {
+        if (status[wrapper.id] && wrapper.querySelector(".form--input").value.includes("@")) {} else {
+          if (status[wrapper.id]) {
+            wrapper.childNodes[1].textContent = "invalid email, doesn't contain @";
+            wrapper.querySelector(".form--input").classList.add("errorBorder");
+          }
+        }
+      }
+    });
+    status[e.currentTarget.id] = true;
+  }; //Check if user clicks on any inputfield
+
+
+  var $inputs = document.querySelectorAll(".form--input");
+  $inputs.forEach(function (input) {
+    input.addEventListener("click", checkInputs);
+  });
+};
+var Scroll = function Scroll() {
+  //check if item with class alert exists
+  var alert = document.querySelector(".alert");
+
+  if (alert) {
+    var $element = document.getElementById("_contact");
+    var elementPosition = window.pageYOffset + $element.getBoundingClientRect().top;
+    console.log(elementPosition);
+    window.focus();
+    setTimeout(function () {
+      window.scrollTo({
+        top: elementPosition + 300
+      });
+    }, 200);
+  }
+};
 
 /***/ }),
 
@@ -19,7 +111,6 @@ init();
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -84,6 +175,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

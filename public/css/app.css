@@ -22,12 +22,8 @@
 html {
     box-sizing: border-box;
 }
-html, body {
-    width: 100%;
-    height:100%;
-    overflow-x:hidden;
-
-}
+html { height: 100%; overflow:auto; }
+body { height: 100%;}
 *,
 *::before,
 *::after {
@@ -48,7 +44,7 @@ ul{
 }
 
 .main {
-width:100%;
+margin-bottom:5rem;
 }
 
 .invert{
@@ -66,7 +62,7 @@ h3 {
 }
 
 section{
-    margin-bottom:5rem;
+    margin-bottom:8rem;
 }
 
 
@@ -456,6 +452,7 @@ font-family: var(--font);
 color: var(--colorDark);
 letter-spacing: 2px;
 text-transform: uppercase;
+text-align: center;
 }
 
 h4,.h4-like{
@@ -505,6 +502,7 @@ cursor:pointer;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom:4rem;
 }
 
 .contact--container {
@@ -552,6 +550,12 @@ cursor:pointer;
     background-color: var(--colorSecondary);
 }
 
+.feedback{
+color:red;
+margin: 0.5rem 0;
+}
+
+
 .alert {
     text-align: center;
     color: var(--colorAlt);
@@ -563,6 +567,11 @@ cursor:pointer;
     width: 80%;
     letter-spacing: 0.1rem;
 }
+
+.errorBorder{
+    border: solid 2px red;
+    }
+
 
 @media only screen and (max-width: 900px) {
     .contact--container {
@@ -596,6 +605,10 @@ font-size:var(--fontSizeSmall);
 margin-bottom:0.8rem;
 }
 
+.errorBorder{
+    border: solid 2px red;
+    }
+
 .info {
     width: 100%;
     display: flex;
@@ -617,6 +630,7 @@ margin-bottom:0.8rem;
 
 .info--title {
     max-width: 20rem;
+    text-align: start;
 }
 
 .sportsclub {
@@ -628,6 +642,7 @@ margin-bottom:0.8rem;
 .adres--wrapper {
     display: flex;
     justify-content: space-between;
+    max-width:30rem;
 }
 
 .adres--text {
@@ -650,6 +665,7 @@ margin-bottom:0.8rem;
     width: 50%;
     max-width: 10rem;
 }
+
 
 .shortwrapper {
     width: 70%;
@@ -682,6 +698,57 @@ margin-bottom:0.8rem;
     width: 50px;
     height: 50px;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .info {
+        flex-direction: column;
+    }
+    .sportsclub{
+        display: none;
+    }
+    .info--container{
+        width:80%;
+        margin-bottom:2rem;
+    }
+
+    .adres--container{
+        margin-bottom:1.5rem;
+    }
+
+   .adres--container-special{
+    width:70%;
+   }
+
+    .adres--wrapper{
+        flex-direction: row;
+    }
+
+    .info--wrapper{
+        width:90%;
+    }
+
+    .shortwrapper{
+        width:100%;
+        margin-top:0rem;
+    }
+
+    .icons--route{
+        width:100%;
+    }
+
+    .info--map {
+        height:40vh;
+        width: 100%;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .info--container{
+        width:90%;
+        margin-bottom:2rem;
+    }
   }
 
 /* General styles */

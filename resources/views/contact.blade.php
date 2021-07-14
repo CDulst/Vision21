@@ -10,7 +10,7 @@
         <title>Document</title>
     </head>
     <body>
-        <main>
+        <main class = "main">
         <h1 class = "title hidden">Vision 21</h1>
         <section class = "info">
             <div class = "info--container">
@@ -39,7 +39,7 @@
                     <div class = "adres--wrapper shortwrapper">
                         <div class = "adres--container">
                             <h3 class = "tag adres--tag">Route</h3>
-                            <div class = "icons">
+                            <div class = "icons icons--route">
                                 <img src="assets/waze.svg" alt="">
                                 <img src="assets/route.svg" alt="">
                             </div>
@@ -58,7 +58,7 @@
             <div class = "info--map" id = "map">
             </div>
         </section>
-        <section class = "contact">
+        <section class = "contact" id = "_contact">
             <div class = "contact--container">
                 <div class = "contact--titlesection">
                     <img class = "lightning" src="/assets/lightning.svg" alt="lightning">
@@ -69,12 +69,24 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <form action="{{ url('/create')}}" method="POST" class="form">
+                <form action="{{ url('/create')}}" method="POST" class="form" >
                     @csrf
-                    <input class="form--input" type="text" placeholder="Naam" name="name" id="name" required /> <br>
-                    <input class="form--input" type="text"  placeholder="Telefoon" name="phone" id="phone" required /> <br>
-                    <input class="form--input" type="email" placeholder="E-mail" name="email" id="email" required /> <br>
-                    <input class="form--input" type="text" placeholder="Bericht" name="message" id="message" required /> <br>
+                    <div class = "inputwrapper" id = "name">
+                        <p class = "feedback"> </p>
+                        <input class="form--input" type="text" placeholder="Naam" name="name" id="name" required /> <br>
+                    </div>
+                    <div class = "inputwrapper" id = "phone">
+                        <p class = "feedback"> </p>
+                        <input class="form--input" type="text"  placeholder="Telefoon" name="phone" id="phone" required /> <br>
+                    </div>
+                    <div class = "inputwrapper" id = "email">
+                        <p class = "feedback"> </p>
+                        <input class="form--input" type="email" placeholder="E-mail" name="email" id="email" required /> <br>
+                    </div>
+                    <div class = "inputwrapper" id = "message">
+                        <p class = "feedback"> </p>
+                        <input class="form--input" type="text" placeholder="Bericht" name="message" id="message" required /> <br>
+                    </div>
                     <input type="submit" class = "form--button"  value = "verzenden">
                     <div class = "form--wrapper">
                         <div class="form--checkbox">
@@ -91,36 +103,36 @@
         </section>
         <main>
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+        <script src="{{ mix('js/app.js') }}"></script>
         <script>
-//Mapbox functionalitiy
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2R1bHN0IiwiYSI6ImNrcjNjNjdsazBwc3cycHB0OGN1NTJjODUifQ.KuTESGl6RW_iuKdGllNShA';
-var geoJson = [
+            //Mapbox functionalitiy
+            mapboxgl.accessToken = 'pk.eyJ1IjoiY2R1bHN0IiwiYSI6ImNrcjNjNjdsazBwc3cycHB0OGN1NTJjODUifQ.KuTESGl6RW_iuKdGllNShA';
+            var geoJson = [
 
-]
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [3.15, 50.95172833434807],
-zoom: 12,
-interactive: false
-});
+            ]
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [3.15, 50.95172833434807],
+            zoom: 12,
+            interactive: false
+            });
 
-var marker =
-{
-type: 'Feature',
-geometry: {
-  type: 'Point',
-  coordinates: [3.15, 50.95172833434807]
-}
-}
-var el = document.createElement('div');
-  el.className = 'marker';
+            var marker =
+            {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [3.15, 50.95172833434807]
+            }
+            }
+            var el = document.createElement('div');
+              el.className = 'marker';
 
-new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .addTo(map);
 
-var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
-</script>
+        </script>
     </body>
 </html>

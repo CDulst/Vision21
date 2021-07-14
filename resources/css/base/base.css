@@ -44,3 +44,7 @@ h3 {
     color: var(--colorDark);
 }
 
+section{
+    margin-bottom:2rem;
+}
+

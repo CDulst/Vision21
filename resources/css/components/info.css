@@ -1,0 +1,84 @@
+.info{
+width:100%;
+display:flex;
+min-height:600px;
+}
+
+.info--map{
+width:50%;
+background-color: black;
+}
+
+.info--container{
+width:50%;
+background-color: white;
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.info--title{
+max-width:20rem;
+}
+
+.sportsclub{
+position:absolute;
+top:calc(50% - 5rem);
+left:0;
+}
+
+.adres--wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.adres--text{
+    margin-bottom:5px;
+}
+
+.info--wrapper{
+    width:70%;
+    height:100%;
+}
+
+.contact--tag{
+    padding: 3rem 0 .3rem ;
+    font-size:var(--fontSizeXSmall);
+    border-bottom: solid 2px var(--colorSecondary);
+    margin-bottom:5rem;
+}
+
+.adres--container-special{
+    width:50%;
+    max-width:10rem;
+}
+
+
+
+.shortwrapper{
+    width:70%;
+    margin-top:3rem;
+}
+
+.tag{
+    font-size:var(--fontSizeXSmall);
+    border-bottom: solid 2px var(--colorSecondary);
+    width:65px;
+    text-align: center;
+}
+
+.adres--tag{
+    width:80px;
+    padding-bottom:5px;
+    }
+
+.info--title{
+font-weight:var(--fontWeightMedium);
+}
+
+.icons{
+    display:flex;
+    justify-content: space-between;
+}
+
+

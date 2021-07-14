@@ -1,12 +1,16 @@
 
-body {
+body, .p-like {
 font-family: var(--font);
+font-size:var(--fontSizeSmall);
+font-weight:var(--fontWeightSmall);
+letter-spacing: 0.2px;
 }
 
 p{
 margin-top:0;
 margin-bottom:0;
 }
+
 
 
 h1, .h1-like {

@@ -9,6 +9,24 @@
     <title>Document</title>
 </head>
 <body>
-<input class = "form--button" type="submit" value = "verzenden"/>
+<main>
+<h1 class = "title hidden">Vision 21</h1>
+<section class = "contact">
+<div class = "contact--container">
+<div class = "contact--titlesection">
+<img class = "lightning" src="/assets/lightning.svg" alt="lightning">
+<h2 class = "h3-like contact--title">Vraag of opmerking?</h2>
+</div>
+<form action="{{ url('contant')}}" method="POST" class="form">
+@csrf
+<input class="form--input" type="text" placeholder="Naam" name="name" id="name" required /> <br>
+<input class="form--input" type="text" placeholder="Telefoon" name="telefoon" id="telefoon" required /> <br>
+<input class="form--input" type="text" placeholder="E-mail" name="email" id="email" required /> <br>
+<input class="form--input" type="text" placeholder="Bericht" name="bericht" id="bericht" required /> <br>
+<input type="submit" class = "form--button" value = "verzenden">
+</form>
+</div>
+</section>
+<main>
 </body>
 </html>

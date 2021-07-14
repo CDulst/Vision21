@@ -5,10 +5,10 @@
   --colorDark:#262626 ;
   --colorWhite: #FFFFFF ;
   --colorGray: #969696 ;
-  --fontSizeXSmall:11;
-  --fontSizeSmall:13;
-  --fontSizeRegular:30;
-  --fontSizeBig:35;
+  --fontSizeXSmall:11px;
+  --fontSizeSmall:13px;
+  --fontSizeRegular:30px;
+  --fontSizeBig:35px;
   --font: "Museo Sans";
   --fontWeightSmall: 400;
   --fontWeightRegular: 500 ;
@@ -47,7 +47,7 @@ ul{
 }
 
 .main {
-
+width:100%;
 }
 
 .invert{
@@ -437,7 +437,7 @@ h1, .h1-like {
 h2, .h2-like{
 font-size:var(--fontSizeBig);
 font-family: var(--font);
-letter-spacing: 1rem;
+letter-spacing: 2px;
 color: var(--colorAlt);
 }
 
@@ -445,7 +445,8 @@ h3,.h3-like{
 font-size:var(--fontSizeRegular);
 font-family: var(--font);
 color: var(--colorDark);
-letter-spacing: 2rem;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
 
 h4,.h4-like{
@@ -474,13 +475,72 @@ color:var(--colorAlt);
 width:100%;
 text-align:center;
 border:none;
-padding: 0.5rem 0;
-border-radius: 0.8rem;
+padding: 1rem 0;
+border-radius: 2rem;
+cursor:pointer;
+}
+
+.lightning{
+    width:2rem;
+    height:2rem;
 }
 
 
 
+.contact{
+width:100%;
+display:flex;
+justify-content:center;
+}
 
+.contact--container{
+width:30%;
+min-width:600px;
+}
+
+.contact--titlesection{
+display:flex;
+flex-direction: column;
+align-items:center;
+padding: 1rem 0;
+border-bottom:var(--colorSecondary) solid 2px;
+margin-bottom:2rem;
+}
+@media only screen and (max-width: 900px) {
+
+    .contact--container{
+        width:70%;
+        min-width:auto;
+        }
+
+    .contact--title{
+        text-align:center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .contact--container{
+        width:90%;
+        min-width:auto;
+        }
+}
+
+
+.form--input{
+width:100%;
+height:2rem;
+padding-left:1rem;
+padding-top:0.2rem;
+background-color:white;
+border: 1px solid var(--colorGray);
+letter-spacing: 1px;
+text-transform:uppercase;
+height:50px;
+border-radius: 2rem;
+font-size:var(--fontSizeSmall);
+margin-bottom:0.8rem;
+}
 
 /* General styles */
 

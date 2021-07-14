@@ -16,7 +16,7 @@ h1, .h1-like {
 h2, .h2-like{
 font-size:var(--fontSizeBig);
 font-family: var(--font);
-letter-spacing: 1rem;
+letter-spacing: 2px;
 color: var(--colorAlt);
 }
 
@@ -24,7 +24,8 @@ h3,.h3-like{
 font-size:var(--fontSizeRegular);
 font-family: var(--font);
 color: var(--colorDark);
-letter-spacing: 2rem;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
 
 h4,.h4-like{

@@ -5,10 +5,10 @@
   --colorDark:#262626 ;
   --colorWhite: #FFFFFF ;
   --colorGray: #969696 ;
-  --fontSizeXSmall:11;
-  --fontSizeSmall:13;
-  --fontSizeRegular:30;
-  --fontSizeBig:35;
+  --fontSizeXSmall:11px;
+  --fontSizeSmall:13px;
+  --fontSizeRegular:30px;
+  --fontSizeBig:35px;
   --font: "Museo Sans";
   --fontWeightSmall: 400;
   --fontWeightRegular: 500 ;

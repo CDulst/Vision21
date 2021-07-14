@@ -1,0 +1,14 @@
+.form--input{
+width:100%;
+height:2rem;
+padding-left:1rem;
+padding-top:0.2rem;
+background-color:white;
+border: 1px solid var(--colorGray);
+letter-spacing: 1px;
+text-transform:uppercase;
+height:50px;
+border-radius: 2rem;
+font-size:var(--fontSizeSmall);
+margin-bottom:0.8rem;
+}

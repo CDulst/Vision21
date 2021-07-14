@@ -4,6 +4,7 @@ color:var(--colorAlt);
 width:100%;
 text-align:center;
 border:none;
-padding: 0.5rem 0;
-border-radius: 0.8rem;
+padding: 1rem 0;
+border-radius: 2rem;
+cursor:pointer;
 }

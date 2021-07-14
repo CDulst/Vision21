@@ -58,7 +58,7 @@ var Validator = function Validator() {
 
 
       if (wrapper.id == "phone") {
-        if (/^[a-zA-Z]+$/.test(wrapper.querySelector(".form--input").value) || wrapper.querySelector(".form--input").value.length > 10) {
+        if (/^[a-zA-Z]+$/.test(wrapper.querySelector(".form--input").value)) {
           if (status[wrapper.id]) {
             wrapper.childNodes[1].textContent = "this is not a valid phone number";
             wrapper.querySelector(".form--input").classList.add("errorBorder");
